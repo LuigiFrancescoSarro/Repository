@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrario di Cesare</title>
+</head>
+
+<body>
+    <h1>Cifrario di Cesare</h1>
+    <form method="post">
+        <label for="parola">Inserisci la parola:</label>
+        <input type="text" id="parola" name="parola" required>
+        <br>
+        <label for="chiave">Inserisci la chiave di cifratura (un numero intero):</label>
+        <input type="number" id="chiave" name="chiave" required>
+        <br>
+        <input type="submit" value="Cifra">
+    </form>
+    {% if parola_cifrata %}
+    <h2>Parola cifrata: {{ parola_cifrata }}</h2>
+    {% endif %}
+    {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+</body>
+
+</html>
